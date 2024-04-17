@@ -67,7 +67,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/defensestation/blocknote-comments"
+    "url": "https://github.com/defensestation/blocknote-mermaid"
   },
   "sideEffects": [
     "**/*.css"
