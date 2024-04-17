@@ -3,7 +3,7 @@
 ![Stability Badge](https://img.shields.io/badge/stability-stable-green.svg)
 ![](https://badgen.net/badge/Version/v1.0.0/blue)
 
-Comments feature for [Blocknote](https://www.blocknotejs.org/).
+Mermaid feature for [Blocknote](https://www.blocknotejs.org/).
 
 ![](assets/demo.gif)
 
