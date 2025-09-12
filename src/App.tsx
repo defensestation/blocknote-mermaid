@@ -1,10 +1,10 @@
 import "./App.css";
 import "@blocknote/core/fonts/inter.css";
-import { BlockNoteView, SuggestionMenuController, getDefaultReactSlashMenuItems, useCreateBlockNote } from "@blocknote/react";
+import { SuggestionMenuController, getDefaultReactSlashMenuItems, useCreateBlockNote } from "@blocknote/react";
 import "@blocknote/react/style.css";
 import { BlockNoteSchema, defaultBlockSpecs, filterSuggestionItems } from "@blocknote/core";
 import { MermaidBlock, insertMermaid } from "../lib/MermaidBlock";
-
+import { BlockNoteView } from "@blocknote/mantine";
 
 const schema = BlockNoteSchema.create({
   blockSpecs: {
@@ -12,7 +12,6 @@ const schema = BlockNoteSchema.create({
     mermaid: MermaidBlock,
   },
 });
-
 
 const App = (props: React.PropsWithChildren) => {
   const editor = useCreateBlockNote({
