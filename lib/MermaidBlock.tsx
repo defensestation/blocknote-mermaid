@@ -10,7 +10,7 @@ import {
 import Mermaid from "./Mermaid";
 import { MdNote } from "react-icons/md";
 import ReactCodeMirror from "@uiw/react-codemirror";
-import { langs } from "@uiw/codemirror-extensions-langs";
+import { mermaid } from 'codemirror-lang-mermaid';
 import { MERMAID_EXAMPLES } from "./example";
 import { useEffect, useMemo, useRef } from "react";
 import Accordion from "./components/accordion";
@@ -44,7 +44,7 @@ export const MermaidBlock = createReactBlockSpec(
       const blockRef =
         useRef<
           BlockFromConfig<CustomBlockConfig, InlineContentSchema, StyleSchema>
-        >();
+        >(null);
       blockRef.current = block;
       const onInputChange = (val: string) => {
         editor.updateBlock(block, {
@@ -106,7 +106,7 @@ export const MermaidBlock = createReactBlockSpec(
             <ReactCodeMirror
               placeholder={"Write your mermaid code here..."}
               style={{ width: "100%", resize: "vertical" }}
-              extensions={[langs.mermaid()]}
+              extensions={[mermaid()]}
               basicSetup={{
                 lineNumbers: false,
                 foldGutter: false,

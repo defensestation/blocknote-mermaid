@@ -1,6 +1,6 @@
 import "./App.css";
 import "@blocknote/core/fonts/inter.css";
-import { BlockNoteView, SuggestionMenuController, getDefaultReactSlashMenuItems, useCreateBlockNote } from "@blocknote/react";
+import { BlockNoteViewRaw, SuggestionMenuController, getDefaultReactSlashMenuItems, useCreateBlockNote } from "@blocknote/react";
 import "@blocknote/react/style.css";
 import { BlockNoteSchema, defaultBlockSpecs, filterSuggestionItems } from "@blocknote/core";
 import { MermaidBlock, insertMermaid } from "../lib/MermaidBlock";
@@ -62,12 +62,14 @@ const App = (props: React.PropsWithChildren) => {
   });
 
   return (
-    <BlockNoteView
+    <BlockNoteViewRaw
       // onChange={() => console.log(editor.document)}
       theme={"light"}
       // editable={false}
       editor={editor}
       slashMenu={false}
+      sideMenu={false}
+      formattingToolbar={false}
     >
       {/* @ts-ignore */}
       <SuggestionMenuController
@@ -80,7 +82,7 @@ const App = (props: React.PropsWithChildren) => {
           )
         }
       />
-    </BlockNoteView>
+    </BlockNoteViewRaw>
   );
 };
 
